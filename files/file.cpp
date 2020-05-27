@@ -120,8 +120,8 @@ File& File::operator =(const File& f2){
 }
 
 std::ostream& operator <<(std::ostream& out, const File& f){
-    out << "File " << f.fileName << "." << f.extension << std::endl;
-    out << "Date of creation " << std::ctime(&f.dateOfCreation) << " Last change on " << std::ctime(&f.dateOfLastChange) << std::endl;
+    out << "File: " << f.fileName << "." << f.extension << std::endl;
+    out << "Date of creation: " << std::ctime(&f.dateOfCreation) << " Last change on: " << std::ctime(&f.dateOfLastChange) << std::endl;
     out << "Data: " << std::endl;
     out << f.data << std::endl;
     out << "Total size in bytes: " << f.sizeInBytes << std::endl;
